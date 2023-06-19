@@ -19,6 +19,7 @@ interface UserMenuProps {
 const UserMenu: React.FC<UserMenuProps> = ({
     currentUser
 }) => {
+    const router = useRouter();
     const registerModal = useRegisterModal();
     const loginModal = useLoginModal();
     const rentModal = useRentModal();
@@ -104,7 +105,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
 
                             <>
                             <MenuItem 
-                                onClick={() => {}}
+                                onClick={() => router.push("/trips")}
                                 label='My trips'
                             />
                             <MenuItem 
